@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INVERSIONES SERFOR</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <!--Header-->
+    <header class="navbar" id="Header">
+        <div class="navbar__container">
+
+            <div class="navbar__logo">
+                <a href="https://elizabethperedo.github.io/SERFOR/">
+                    <img src="https://www.serfor.gob.pe/portal/wp-content/uploads/2021/01/midagri-serfor.png" alt=""
+                        class="navbar__logo-img" title="SERFOR"></a>
+            </div>
+
+            <div class="navbar__items">
+                <ul>
+                    <a href="https://elizabethperedo.github.io/SERFOR/">Inicio</a>
+
+                    <!--AQUI AGREGAR LOS LINK-->
+                    
+                </ul>
+            </div>
+            <div class="navbar__icon">
+                <i class="fas fa-bars" id="menu-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!--Banner-->
+    <section class="landing__page" id="home">
+        <div class="landing__page-container">
+            <div class="landing__page-text">
+                <h1 style="text-transform: uppercase;" data-scroll-reveal="enter from the bottom after 0.1s">
+                    <b>
+                        Servicio Nacional Forestal y de Fauna Silvestre
+                    </b>
+                </h1>
+
+                <p data-scroll-reveal="enter from the bottom after 0.8s">
+                    Somos la Autoridad Nacional Forestal y de Fauna Silvestre y tenemos como función principal promover
+                    la gestión sostenible de la flora y fauna silvestre del país.
+                </p>
+                <br />
+
+            </div>
+            <div class="landing__page-img">
+                <img src="./imagenes/banner/banner1.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!--Section Cards-->
+    <section class="container__large">
+        <!--Section Button-->
+        <section class="container__medium horizontal">
+            <!-- <div-- class="search" id="search-container">
+                <input type="text" id="search-input" class="searchTerm" placeholder="Buscar">
+                <button type="submit" class="searchButton" id="search">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div-->
+
+            <div id="filters" class="horizontal">
+
+                <p><b>BUSCAR: </b></p>
+                <div class="">
+                    <select id="tipo1" class="">
+                        <option value="">-- ATFFS --</option>
+                        <option value="ATFFS_Ancash">ATFFS_Ancash</option>
+                        <option value="ATFFS_Apurímac">ATFFS_Apurímac
+                        </option>
+                        <option value="ATFFS_Arequipa">ATFFS_Arequipa
+                        </option>
+                        <option value="ATFFS_Cajamarca">ATFFS_Cajamarca
+                        </option>
+                        <option value="ATFFS_Cusco">ATFFS_Cusco
+                        </option>
+                        <option value="ATFFS_Lambayeque">ATFFS_Lambayeque
+                        </option>
+                        <option value="ATFFS_Lima">ATFFS_Lima
+                        </option>
+                        <option value="ATFFS_Piura">ATFFS_Piura
+                        </option>
+                        <option value="ATFFS_Puno">ATFFS_Puno
+                        </option>
+                        <option value="ATFFS_Sierra_Central">ATFFS_Sierra_Central
+                        </option>
+                    </select>
+                </div>
+
+                <div class="">
+                    <select id="tipo2" class="">
+                        <option value="">-- Fase --</option>
+                        <option value="Fase_de_Formulación_y_Evaluación">Fase Formulación Evaluación </option>
+                        <option value="Fase_de_Ejecución">Fase Ejecución </option>
+                    </select>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!--Section Cards-->
+            <main class="container__post" id="cards">
+
+            </main>
+    </section>
+
+
+    <section class="inversiones"></section>
+
+    <script src="js/script.js"></script>
+    <script src="js/cards/card.js"></script>
+
+</body>
+
+</html>

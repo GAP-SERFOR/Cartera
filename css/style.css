@@ -1,0 +1,716 @@
+/* =================
+*SETTINGS*
+=================*/
+@import "root.css";
+@import "grid.css";
+@import "card.css";
+@import "navbar.css";
+@import "search.css";
+@import "landing-page.css";
+@import "gallery.css";
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+
+  text-decoration: none;
+  outline: none;
+  border: none;
+  transition: all 0.2s linear;
+}
+
+* {
+  font-family: var(--font-body);
+  margin: 0;
+}
+
+
+/* =================
+*GENERAL STYLES*
+=================*/
+
+html {
+  -webkit-text-size-adjust: 100%;
+  font-size: 100%;
+  line-height: var(--line-heigh);
+  overflow-x: hidden;
+  scroll-padding-top: 5.5rem;
+  scroll-behavior: smooth;
+}
+
+body {
+  counter-reset: h1;
+}
+
+pre::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+pre::-webkit-scrollbar,
+table::-webkit-scrollbar {
+  height: 0.8rem;
+}
+
+pre::-webkit-scrollbar-track,
+table::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+  background: var(--color2);
+}
+
+pre::-webkit-scrollbar-thumb,
+table::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  background: var(--color1);
+}
+
+.hide {
+  display: none;
+}
+
+/* ====================
+    * THEME *
+==================== */
+
+.background-body {
+  background-color: var(--background-body);
+}
+
+.theme-dark {
+  --white: #000;
+  --black: #fff;
+  --background-body: black;
+}
+
+#dark {
+  padding: 0em;
+  margin: 0em;
+  cursor: pointer;
+}
+
+#dark:hover {
+  background: transparent;
+}
+
+/* ====================
+    * CONTAINERS *
+==================== */
+.container {
+  padding: 2rem;
+  margin-right: 5rem;
+}
+
+.container__large {
+  width: 100%;
+  margin: 0em auto;
+  padding: 1rem;
+}
+
+.container__medium {
+  max-width: 90%;
+  width: var(--width);
+  margin: 0em auto;
+  padding: 1rem;
+}
+
+.container__small {
+  max-width: 80%;
+  width: var(--width);
+  overflow: hidden;
+  margin: 0em auto;
+  padding: 1rem 5rem;
+}
+
+.container__center {
+  margin: auto;
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.container__horizontal {
+  padding: 2rem;
+  margin-right: 5rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.relative {
+  position: relative;
+}
+
+.horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+/* ====================
+    * TEXT *
+==================== */
+mark,
+.btn,
+button,
+figcaption,
+b,
+strong,
+select,
+datalist,
+label,
+p,
+a,
+ol,
+ul,
+ol,
+li,
+dl,
+pre,
+table,
+blockquote {
+  font-size: var(--font-size);
+  color: var(--black);
+  text-align: justify;
+}
+
+br,
+p,
+.h1,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+summary.h1,
+summary.h2,
+summary.h3 {
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
+/* *Link a* */
+
+a,
+link {
+  color: inherit;
+  font-size: inherit;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+link:hover,
+a:hover,
+a:active {
+  /**border-bottom: 0.1em solid var(--color1);**/
+  color: var(--color1);
+}
+
+ul,
+ol,
+dl,
+pre,
+table,
+blockquote {
+  margin-bottom: 0;
+}
+
+pre {
+  margin-top: 0em !important;
+  margin-bottom: 0em !important;
+}
+
+hr {
+  border: 0;
+  border-top: 0.5em solid var(--color1);
+  margin: 1.25em 0;
+  width: 5em;
+}
+
+figcaption,
+b,
+strong,
+.h1,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+summary.h1,
+summary.h2,
+summary.h3 {
+  color: var(--color1);
+  margin-left: 0rem;
+  font-family: var(--font-subtitle);
+  font-weight: 900;
+}
+
+h1,
+summary.h1,
+.h1 {
+  font-size: 1.7rem;
+  font-family: var(--font-title);
+  color: black;
+}
+
+h2,
+summary.h2 {
+  font-size: 1.6rem;
+}
+
+h3,
+summary.h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.35rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+ol li::marker,
+ul li::marker {
+  color: var(--color1);
+  padding-left: 0.5em;
+  font-weight: bold;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+img,
+figure img {
+  padding: 0.5rem;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+}
+
+.txt-vertical {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+}
+
+.txt-center{
+  margin: auto;
+  text-align: center;
+  
+}
+/* ====================
+    * VISIBLE *
+==================== */
+.visible {
+  visibility: visible;
+}
+
+.invisible {
+  display: none;
+  visibility: hidden;
+}
+
+/* ====================
+    * ARTICLE *
+==================== */
+
+article {
+  padding: 1rem 3rem;
+  margin: 1rem 0rem;
+  background: var(--white);
+  color: var(--black);
+  margin-bottom: 2em;
+  box-shadow: var(--box-shadow);
+}
+
+article.bottom {
+  border-radius: var(--border-radius-no-top);
+  border-top: 0em;
+  margin-top: 0em;
+}
+
+article.top {
+  border-radius: var(--border-radius-no-bottom);
+  margin-bottom: 0em;
+  border-bottom: none;
+  /*background-image: var(--background-img;*/
+  background-color: var(--color2);
+}
+
+article .code {
+  border-radius: 1em 1em 0em 0em;
+  border: none;
+  background: var(--color2);
+  width: auto;
+  margin: 1em 0em 0em 0em;
+}
+
+/* ====================
+    * CARDS *
+==================== */
+
+blockquote {
+  margin: 1rem 0rem;
+  border-left: 16px solid var(--color1);
+  background: var(--color2);
+  padding: 1rem;
+}
+
+blockquote cite {
+  display: block;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: right;
+}
+
+blockquote>* {
+  color: black;
+}
+
+/* ====================
+    * CODE, MARK *
+==================== */
+code,
+mark,
+kbd,
+samp,
+small,
+span {
+  font-weight: bold;
+  padding: 0em 0.3em;
+  margin: 0em 0.3em;
+  background: var(--light-gray);
+  border-radius: 2px;
+  color: black;
+}
+
+code,
+code * {
+  font-family: var(--font-code);
+  font-size: 1.2rem;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+  padding: 0em 0.4em !important;
+}
+
+kbd {
+  border: 0.1em solid var(--gray);
+}
+
+span {
+  color: var(--color1);
+  padding: 0em;
+  background: transparent;
+}
+
+meter,
+progress {
+  width: auto;
+  height: 2.5em;
+  display: block;
+}
+
+meter::-webkit-meter-optimum-value {
+  background: var(--color1);
+}
+
+/* ====================
+    * MARGIN AND PADDING*
+==================== */
+
+.padding {
+  padding: 2em;
+}
+
+.margin {
+  margin: 2em;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0em;
+}
+
+.no-margin-top {
+  margin-top: 0em;
+}
+
+/* =================
+*TABLE*
+=================*/
+
+table {
+  border-collapse: collapse;
+  color: var(--black);
+  display: block;
+  overflow-x: auto;
+  line-height: 1rem;
+  margin: 0.5em 0em;
+}
+
+table ul {
+  padding-left: 1em;
+  margin: 0em;
+}
+
+table thead,
+table tfoot {
+  font-size: var(--font-size);
+}
+
+table td,
+table th {
+  border: 1px solid var(--gray);
+  padding: 0.3em;
+}
+
+table td,
+table td * {
+  text-align: left;
+}
+
+table th {
+  background: var(--color1);
+  color: var(--white);
+  text-align: center;
+}
+
+table tr:hover {
+  background: var(--light-gray);
+  color: black;
+}
+
+/* =================
+*BUTTON*
+=================*/
+
+button,
+.btn {
+  cursor: pointer;
+  background: var(--color1);
+  padding: 7px 20px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 7px;
+  margin: auto;
+  box-shadow: -10px 20px 15px -10px var(--gray);
+  margin-bottom:0.5rem;
+}
+
+button.circle {
+  border-radius: 50%;
+  height: 2em;
+  width: 2em;
+  margin-left: 2em;
+  margin-bottom: 2em;
+}
+
+button:hover,
+.btn:hover {
+  background: var(--gray);
+  color: black;
+}
+
+/* =================
+*FORMS*
+=================*/
+
+form,
+fieldset {
+  display: flex;
+  margin: 1rem;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: stretch;
+}
+
+form>*,
+fieldset>* {
+  padding: 0.5rem;
+  font-size: var(--font-size);
+  margin: 0.2rem 0.5rem;
+  color: var(--black);
+  background: var(--white);
+}
+
+form label,
+label {
+  font-weight: bold;
+}
+
+fieldset {
+  border: 0.2em solid var(--color1);
+}
+
+legend {
+  background-color: var(--color1);
+  color: var(--white);
+  padding: 0.5em;
+}
+
+input {
+  border: 0.1rem solid var(--color1);
+}
+
+input:hover {
+  border: 0.1rem solid var(--color2);
+}
+
+select,
+datalist {
+  background-color: var(--color1);
+  color: white;
+  border: 0.1em solid var(--color1);
+  border-radius: 0;
+  margin: 0 0.5em;
+  border: 0.1em solid var(--color1);
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;
+  font-size: 1.5rem;
+}
+
+datalist:after,
+select:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+}
+
+option {
+  padding: 2rem;
+}
+
+progress[value] {
+  appearance: none;
+  margin: 0 0 1.5em;
+}
+
+progress[value]::-webkit-progress-bar {
+  background: var(--color2);
+  border: 1em;
+}
+
+progress[value]::-webkit-progress-value {
+  position: relative;
+  background: var(--color1);
+  animation: animate-stripes 5s linear infinite;
+}
+
+/* =================
+*COLORS*
+=================*/
+
+/**BACKGROUND**/
+color1,
+.color1,
+.hover-color1:hover {
+  color: var(--color2);
+  background-color: var(--color1);
+  padding: 0.1em;
+  font-weight: 500;
+}
+
+color2,
+.color2,
+.hover-color2:hover {
+  color: black;
+  background-color: var(--color2);
+  padding: 0.1em;
+}
+
+.txt-color1{
+  color: var(--color1);
+}
+
+.txt-color2 {
+  color: var(--color2);
+}
+
+.txt-color3 {
+  color: var(--color3);
+}
+
+
+
+@import "responsive.css";
+
+@media (max-width: 1200px) {
+  :root {
+    --font-size: 1.2rem;
+  }
+
+  .container__small,
+  .container__medium,
+  .container__slide{
+    min-width: 100%;
+    padding: 0 0.5em;
+    /*margin: 0em auto !important;*/
+  }
+
+  .container {
+    min-width: 100%;
+    padding: 2em;
+    /*margin: 0em auto !important;*/
+  }
+
+
+  article {
+    box-shadow: none;
+    padding: 0.5rem;
+    margin: 0rem;
+  }
+
+  .horizontal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 850px) {
+
+  .container__small,
+  .container__medium,
+  .container__slide {
+    padding: 0 0.1em;
+  }
+}
